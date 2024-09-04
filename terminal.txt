@@ -1,0 +1,3 @@
+alias startsigafi='cd ~/projetos/sigafi/ && docker compose up -d && code . && google-chrome --profile-directory="Profile 2" http://sigafi.test'
+alias stopsigafi='cd ~/projetos/sigafi/ && docker compose stop'
+alias updatesigafidb='cd ~/projetos/sigafi/ && docker compose stop && sudo rm -R ~/projetos/sigafi/database/.docker && cd ~/projetos/sigafi/database/entrypoint && cp $(ls -1t ~/Downloads/*.sql.gz | head -1) . && cd ../.. && docker compose up -d'
